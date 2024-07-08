@@ -48,14 +48,14 @@ async def ping_cmd(client, message):
         _ping = f"""
 <blockquote><b><emoji id={emot_pong}>🏓</emoji>Ping: <code>{str(delta_ping).replace('.', ',')} ms</code>
 <emoji id={emot_uptime}>⏳</emoji>Uptime: <code>{str(uptime).replace('.', ',')} ms</code>
-<emoji id={emot_mention}>👑</emoji>ᴀʀᴋᴀɴᴀ ꭙ ᴜʙᴏᴛ: <a href=tg://user?id={client.me.id}>{client.me.first_name} {client.me.last_name or ''}</a></b></blockquote>
+<emoji id={emot_mention}>👑</emoji>ᴀʀᴋᴀɴᴀ ꭙ ᴜʙᴏᴛ: <a href=tg://user?id={client.me.id}>{client.me.first_name} {client.me.last_name or ''}<a><b><blockquote>
 """
     else:
         _ping = f"""
 <blockquote><b>❏ PONG!!🏓
 ├• </b><code>{str(delta_ping).replace('.', ',')} ms</code>
 ├• <code>{uptime}</code>
-╰• <a href=tg://user?id={client.me.id}>{client.me.first_name} {client.me.last_name or ''}</a></b></blockquote>
+╰• <a href=tg://user?id={client.me.id}>{client.me.first_name} {client.me.last_name or ''}<a><b><blockquote>
 """
     await eor(message, _ping)
 
